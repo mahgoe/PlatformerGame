@@ -1,28 +1,69 @@
-JFrame:
+-------------------------
+--------------------------
+This are just personal notes to this project and what I did learned new.
+You can ignore them.
+-------------------------
+-------------------------
+         JFrame
+-------------------------
 Is a part of a collection of components, its the "frame" of a painting, part of a larger collections of GUI components
 JFrame, JPanel, JTextField, JScrollPane, JLabel...
 
-JFrame is not visible by default and it needs to be on bottom or you get black screens
-    & if you shut down the Window you need to call it to shut down fully.
+-------------------------
+        javadoc
+-------------------------
+Like I was used in C# summary's fpr constructors can get created by /// and here in Java you do /** + ENTER
+/**
+  * Example Title
+  *
+  * @param param1 Description of the param
+  * @param param2 Description of the param
+  *
+  */
 
-EXIT_ON_CLOSE is an integer --> it have 3 like HIDE_ON_CLOSE ect.
+-------------------------
+        Mouse listener
+-------------------------
+mouseListener() checking -clicked -pressed -released
+mouseMotionListener() -moved -dragged
 
-JFrame is on a painting the frame itself and the JPanel is the picture itself
+-------------------------
+        g.setColor()
+-------------------------
+g.setColor() gives the upcoming shapes a color
 
-paintComponent is from JPanel to show Graphical things (read more about it didn't understand it) and Graphics is to draw
-actuality
-JPanel -> Brush
-Graphics -> Paint you can do with the brush
-super.paintComponent(g); call the superclass (JPanel -> JComponent) and then it starts painting itself
+-------------------------
+        nextInt(x)
+-------------------------
+nextInt(x) returns an integer between 0 and x
 
-Self-Research:
-Like I was used to in C# summary's for constructors you did /// and here in Java you use javadoc.
-  /**
-     * Title
-     *
-     * @param param1 Description for the first param.
-     * @param param2 Description for the second param.
-     *
-     */
+-------------------------
+        Gameloop
+-------------------------
+GameLoop needed to repaint the surface, everytime we call repaint we're actually call paintComponent and repainting it
+with the new values
 
-Important that the code needs to be line by line. I did first GameWindow then GamePanel and then it gave me errors.
+GameLoop components:
+-Thread
+-Runnable
+
+-------------------------
+    Problems with gameloops just with repaint()
+-------------------------
+One of many problems of repaint-loop is that everything(input, rendering, updates, event check) happens on the same thread.
+We want that gameloop is on a seperate thread and updates, event checks are on them
+and on the main thread are the inputs, rendering
+
+-------------------------
+        Thread/Runnable
+-------------------------
+What is a Thread?
+Its similar like an process in a OS like browser process, discord etc.
+- One program can have more than one process
+- One process can have more than one thread
+-- A thread takes care of a specific task
+
+What is a Runnable?
+-It passed into a thread
+- The code we want to run in a seperate thread
+Call: Thread.start();
