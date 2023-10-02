@@ -72,3 +72,21 @@ What is a Runnable?
 Call: Thread.start();
 
 
+-------------------------
+        Animations
+-------------------------
+First of all you need to get the sprites idle into a array and then you loop it through the full array everytime
+and it will look like an animation, but its just "changing" the img.
+
+To be efficient and don't have an big array like idleAnimation, runAnimation etc. you can do an 2D Array.
+
+As I did the constants I learned something new, that if you have in a switch/case cases that returning the same amount
+you can write them together and then one return like this:
+
+ case JUMP:
+ case ATTACK_1:
+ case ATTACK_JUMP_1:
+ case ATTACK_JUMP_2:
+    return 3;
+
+
