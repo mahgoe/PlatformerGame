@@ -14,12 +14,11 @@ public class GameWindow {
      */
     public GameWindow (GamePanel gamePanel){
         jframe = new JFrame();
-
-        //create the frame
-        jframe.setSize(400, 400);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //adding the gamePanel
         jframe.add(gamePanel);
+        jframe.setResizable(false);
+        jframe.pack();
         //set the window in the center of the screen
         jframe.setLocationRelativeTo(null);
         //is by default == false and put it everytime on bottom --> or you get always black screens

@@ -9,6 +9,9 @@ You can ignore them.
 Is a part of a collection of components, its the "frame" of a painting, part of a larger collections of GUI components
 JFrame, JPanel, JTextField, JScrollPane, JLabel...
 
+Size: If you place the window size in JFrame you setting the window including Top Bar of the window. So they are invisible
+Size in the frame. That's why we do the size in the Panel and not the Frame.
+
 -------------------------
         javadoc
 -------------------------
@@ -67,3 +70,5 @@ What is a Runnable?
 -It passed into a thread
 - The code we want to run in a seperate thread
 Call: Thread.start();
+
+
