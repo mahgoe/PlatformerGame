@@ -130,16 +130,22 @@ public class GamePanel extends JPanel {
     }
 
     /**
+     * Function Update for Game.java
+     */
+    public void updateGame(){
+        updateAnimationTick();
+
+        setAnimation();
+        updatePosition();
+    }
+
+    /**
      * paintComponent
      * @param g the <code>Graphics</code> object to protect
      */
     public void paintComponent(Graphics g){
         //calling super class
         super.paintComponent(g);
-        updateAnimationTick();
-
-        setAnimation();
-        updatePosition();
 
         g.drawImage(animations[playerAction][aniIndex], (int) xDelta, (int) yDelta, 256, 160, null);
     }

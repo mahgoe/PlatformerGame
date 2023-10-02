@@ -89,4 +89,13 @@ you can write them together and then one return like this:
  case ATTACK_JUMP_2:
     return 3;
 
+ -------------------------
+        UPS vs FPS
+ -------------------------
+ update/tick vs render/frames
+ -------------------------
+ update/tick: take care of logic, playermove, event etc. - In case of laggs there is a way to "catch up"
+ render/frames: Draws the gamescene, the level, player, enemies ect.
 
+ Reasons to seperate them: Easier to read the code, logic needs to run smooth as possible, user can set different FPS for different systems.
+ +++Get more into UPS like how it works to handle lost times in FPS++
