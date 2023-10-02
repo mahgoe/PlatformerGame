@@ -20,6 +20,8 @@ public class GameWindow {
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //adding the gamePanel
         jframe.add(gamePanel);
+        //set the window in the center of the screen
+        jframe.setLocationRelativeTo(null);
         //is by default == false and put it everytime on bottom --> or you get always black screens
         jframe.setVisible(true);
     }

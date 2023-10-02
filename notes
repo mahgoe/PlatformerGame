@@ -1,3 +1,8 @@
+--------------------------
+This are just personal notes to write a conclusion to this project.
+You can ignore them
+-------------------------
+
 JFrame:
 Is a part of a collection of components, its the "frame" of a painting, part of a larger collections of GUI components
 JFrame, JPanel, JTextField, JScrollPane, JLabel...
@@ -26,3 +31,34 @@ Like I was used to in C# summary's for constructors you did /// and here in Java
      */
 
 Important that the code needs to be line by line. I did first GameWindow then GamePanel and then it gave me errors.
+
+mouseListener() checking -clicked -pressed -released
+mouseMotionListener() -moved -dragged
+
+GameLoop needed to repaint the surface, everytime we call repaint we're actually call paintComponent and repainting it
+with the new values
+
+g.setColor() gives the upcoming shapes a color
+
+nextInt(x) returns an integer between 0 and x
+
+
+What is a Thread?
+Its similar like an process in a OS like browser process, discord etc.
+- One program can have more than one process
+- One process can have more than one thread
+-- A thread takes care of a specific task
+
+What is a Runnable?
+-It passed into a thread
+- The code we want to run in a seperate thread
+Call: Thread.start();
+
+GameLoop components:
+-Thread
+-Runnable
+
+One of many problems of repaint-loop is that everything(input, rendering, updates, event check) happens on the same thread.
+We want that gameloop is on a seperate thread and updates, event checks are on them
+and on the main thread are the inputs, rendering
+
