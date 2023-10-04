@@ -1,6 +1,8 @@
 package main;
 
 import javax.swing.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
 
 public class GameWindow {
 
@@ -23,5 +25,20 @@ public class GameWindow {
         jframe.setLocationRelativeTo(null);
         //is by default == false and put it everytime on bottom --> or you get always black screens
         jframe.setVisible(true);
+        /**
+         * Sets all booleans false if focus loose
+         */
+        jframe.addWindowFocusListener(new WindowFocusListener() {
+            @Override
+            public void windowGainedFocus(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowLostFocus(WindowEvent e) {
+                gamePanel.getGame().windowFocusLost();
+
+            }
+        });
     }
 }

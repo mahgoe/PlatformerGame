@@ -89,6 +89,7 @@ you can write them together and then one return like this:
  case ATTACK_JUMP_2:
     return 3;
 
+Everytime I change the animation like from IDLE to ATTACKING we need to reset the animationtick and get the first frame.
  -------------------------
         UPS vs FPS
  -------------------------
