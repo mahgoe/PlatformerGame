@@ -100,3 +100,9 @@ Everytime I change the animation like from IDLE to ATTACKING we need to reset th
 
  Reasons to seperate them: Easier to read the code, logic needs to run smooth as possible, user can set different FPS for different systems.
  +++Get more into UPS like how it works to handle lost times in FPS++
+
+-------------------------
+          Window Scale
+-------------------------
+ I set the window first to 1280 x 800, but that's not good because if the elements and the level is bigger than that I'll run into big issues.
+ To do that I need to get the default sizes of the tiles and how much I scale everything.
